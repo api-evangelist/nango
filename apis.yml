@@ -6,20 +6,59 @@ apis:
     name: Nango
     tags:
       - API
+      - Integrations
+      - OAuth
+      - Unified API
+      - Syncing
+      - Webhooks
+      - AI Agents
+      - MCP
     humanURL: ' https://www.nango.dev/'
     properties:
       - url: ' https://www.nango.dev/'
         type: Documentation
-    description: 'Developer infrastructure for product integrations '
+      - url: https://nango.dev/docs/reference/api
+        type: API Reference
+      - url: https://nango.dev/docs/reference/sdks/node
+        type: Node SDK
+      - url: https://nango.dev/docs/reference/sdks/python
+        type: Python SDK
+      - url: https://nango.dev/docs/reference/sdks/frontend
+        type: Frontend SDK
+      - url: https://nango.dev/docs/reference/functions
+        type: SDK
+      - url: https://nango.dev/docs/reference/cli
+        type: CLI
+      - url: https://nango.dev/docs/getting-started/quickstart
+        type: Getting Started
+      - url: https://nango.dev/docs/guides/primitives/auth
+        type: Authentication
+      - url: https://nango.dev/api-integrations
+        type: Integrations
+      - url: https://nango.dev/auth
+        type: OAuth
+      - url: https://nango.dev/docs/guides/platform/security
+        type: Security
+    description: >-
+      Nango provides a unified API platform for building product integrations
+      with 600+ external APIs. It offers managed API authentication (OAuth and
+      other auth methods), a syncing framework, proxy for API requests with
+      automatic credential injection, webhook handling, and observability. The
+      platform supports tool calling for AI agents and MCP server
+      implementation.
 name: Nango
 tags:
   - Unified API
   - Integrations
+  - OAuth
+  - AI Agents
+  - Syncing
+  - Webhooks
 type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2026-01-02'
-modified: '2026-01-02'
+modified: '2026-03-03'
 position: Consuming
 segments:
   - Unified_API
@@ -28,7 +67,7 @@ description: >-
   product integrations with external APIs. It provides the infrastructure to
   build reliable, scalable integrations fast, including API authentication, a
   syncing framework, webhook handling, and observability GitHub, supporting over
-  400 APIs with 600+ pre-built integrations Y Combinator. 
+  400 APIs with 600+ pre-built integrations Y Combinator.
 
 
   The platform takes a code-first approach where developers write integrations
@@ -38,7 +77,48 @@ description: >-
   particularly useful for SaaS companies that need to integrate with common
   business tools like CRMs, calendars, and project management software, and it's
   available as both a cloud service and self-hosted open-source solution.
+common:
+  - url: https://nango.dev/docs
+    type: Documentation
+  - url: https://nango.dev/docs/getting-started/quickstart
+    type: Getting Started
+  - url: https://nango.dev/pricing
+    type: Pricing
+  - url: https://nango.dev/blog
+    type: Blog
+  - url: https://nango.dev/docs/updates
+    type: Change Log
+  - url: https://status.nango.dev/
+    type: Status
+  - url: https://app.nango.dev
+    type: Portal
+  - url: https://nango.dev/terms
+    type: Terms of Service
+  - url: https://nango.dev/privacy-policy
+    type: Privacy Policy
+  - url: https://github.com/NangoHQ/nango
+    type: GitHub Repo
+  - url: https://nango.dev/docs/reference/sdks/node
+    type: Node SDK
+  - url: https://nango.dev/docs/reference/sdks/frontend
+    type: Frontend SDK
+  - url: https://nango.dev/docs/reference/cli
+    type: CLI
+  - url: https://nango.dev/docs/guides/platform/security
+    type: Security
+  - url: https://trust.nango.dev
+    type: Trust Center
+  - url: https://nango.dev/slack
+    type: Slack
+  - url: https://twitter.com/NangoHQ
+    type: Twitter
+  - url: https://www.linkedin.com/company/nangohq
+    type: LinkedIn
+  - url: https://nango.dev/api-integrations
+    type: Integrations
+  - url: https://nango.dev/docs/reference/overview
+    type: API Reference
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
+    email: kin@apievangelist.com
 specificationVersion: '0.19'
