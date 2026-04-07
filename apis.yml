@@ -13,17 +13,16 @@ created: '2026-01-02'
 modified: '2026-03-16'
 specificationVersion: '0.19'
 tags:
-  - Unified API
+  - AI Agents
   - Integrations
   - OAuth
-  - AI Agents
   - Syncing
+  - Unified API
   - Webhooks
 apis:
   - aid: nango:nango
     name: Nango
     tags:
-      - API
       - Integrations
       - OAuth
       - Unified API
