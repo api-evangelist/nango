@@ -10,7 +10,7 @@ type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/nango/refs/heads/main/apis.yml
 created: '2026-01-02'
-modified: '2026-03-16'
+modified: '2026-04-28'
 specificationVersion: '0.19'
 tags:
   - AI Agents
@@ -36,6 +36,8 @@ apis:
         type: Getting Started
       - url: https://nango.dev/docs/guides/primitives/auth
         type: Authentication
+      - url: https://nango.dev/docs/llms.txt
+        type: LLMs.txt
     description: >-
       Nango provides a unified API platform for building product integrations
       with 600+ external APIs. It offers managed API authentication (OAuth and

@@ -16,7 +16,7 @@ Nango.dev is a developer infrastructure platform that simplifies building produc
 ## Timestamps
 
 - **Created:** 2026-01-02 
-- **Modified:** 2026-03-16 
+- **Modified:** 2026-04-28 
 
 ## APIs
 
@@ -36,6 +36,7 @@ Nango provides a unified API platform for building product integrations with 600
 - [Reference](https://nango.dev/docs/reference/api)
 - [Getting Started](https://nango.dev/docs/getting-started/quickstart)
 - [Authentication](https://nango.dev/docs/guides/primitives/auth)
+- [LLMs.txt](https://nango.dev/docs/llms.txt)
 
 ## Common Properties
 
