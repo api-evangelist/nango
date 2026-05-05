@@ -1,0 +1,13 @@
+{
+  "repo": "nango",
+  "feeds": [
+    {
+      "source": "https://nango.dev/blog",
+      "feed_url": "https://nango.dev/blog/rss.xml",
+      "saved": 10,
+      "title": "Blog | Nango"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:32:39Z"
+}
