@@ -31,7 +31,7 @@ apis:
       - url: https://nango.dev/docs/reference/api
         type: Reference
       - url: https://nango.dev/docs/getting-started/quickstart
-        type: Getting Started
+        type: GettingStarted
       - url: https://nango.dev/docs/guides/primitives/auth
         type: Authentication
       - url: https://nango.dev/docs/llms.txt
@@ -43,23 +43,23 @@ common:
   - url: https://nango.dev/docs
     type: Documentation
   - url: https://nango.dev/docs/getting-started/quickstart
-    type: Getting Started
+    type: GettingStarted
   - url: https://nango.dev/pricing
     type: Pricing
   - url: https://nango.dev/blog
     type: Blog
   - url: https://nango.dev/docs/updates
-    type: Change Log
+    type: ChangeLog
   - url: https://status.nango.dev/
-    type: Status
+    type: StatusPage
   - url: https://app.nango.dev
     type: Portal
   - url: https://nango.dev/terms
-    type: Terms of Service
+    type: TermsOfService
   - url: https://nango.dev/privacy-policy
-    type: Privacy Policy
+    type: PrivacyPolicy
   - url: https://github.com/NangoHQ/nango
-    type: GitHub Repository
+    type: GitHubRepository
   - type: Features
     data:
       - 'Free: 10 connections, 100k proxy/runs/logs/storage/webhooks, 2 envs'
