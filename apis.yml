@@ -40,6 +40,8 @@ apis:
       APIs. It offers managed API authentication (OAuth and other auth methods), a syncing framework,
       proxy for API requests with automatic credential injection, webhook handling, and observability.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/nangohq
   - url: https://nango.dev/docs
     type: Documentation
   - url: https://nango.dev/docs/getting-started/quickstart
