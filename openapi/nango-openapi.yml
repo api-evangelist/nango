@@ -1,0 +1,288 @@
+openapi: 3.1.0
+info:
+  title: Nango API
+  description: |
+    Nango is a developer infrastructure platform for building product
+    integrations with external APIs. The Nango API exposes endpoints
+    for managing integrations and connections, triggering syncs and
+    actions, and proxying authenticated requests to upstream APIs.
+  version: '1.0'
+servers:
+  - url: https://api.nango.dev
+    description: Nango Cloud production API
+security:
+  - bearerAuth: []
+tags:
+  - name: Connections
+    description: Manage end-user connections and credentials.
+  - name: Integrations
+    description: Manage integration definitions.
+  - name: Syncs
+    description: Manage and trigger data syncs.
+  - name: Actions
+    description: Trigger one-shot actions.
+  - name: Proxy
+    description: Proxy requests to upstream APIs with credential injection.
+paths:
+  /connections:
+    get:
+      tags: [Connections]
+      summary: List connections
+      operationId: listConnections
+      responses:
+        '200':
+          description: List of connections.
+    post:
+      tags: [Connections]
+      summary: Import a connection
+      operationId: importConnection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Connection imported.
+  /connections/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Connections]
+      summary: Get connection and credentials
+      operationId: getConnection
+      responses:
+        '200':
+          description: Connection details.
+    patch:
+      tags: [Connections]
+      summary: Patch a connection
+      operationId: patchConnection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Connection updated.
+    delete:
+      tags: [Connections]
+      summary: Delete a connection
+      operationId: deleteConnection
+      responses:
+        '204':
+          description: Connection deleted.
+  /connections/{id}/metadata:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [Connections]
+      summary: Set connection metadata
+      operationId: setConnectionMetadata
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Metadata set.
+    patch:
+      tags: [Connections]
+      summary: Edit connection metadata
+      operationId: editConnectionMetadata
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Metadata updated.
+  /integrations:
+    get:
+      tags: [Integrations]
+      summary: List integrations
+      operationId: listIntegrations
+      responses:
+        '200':
+          description: List of integrations.
+    post:
+      tags: [Integrations]
+      summary: Create an integration
+      operationId: createIntegration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Integration created.
+  /integrations/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Integrations]
+      summary: Get an integration
+      operationId: getIntegration
+      responses:
+        '200':
+          description: Integration details.
+    patch:
+      tags: [Integrations]
+      summary: Update an integration
+      operationId: updateIntegration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Integration updated.
+    delete:
+      tags: [Integrations]
+      summary: Delete an integration
+      operationId: deleteIntegration
+      responses:
+        '204':
+          description: Integration deleted.
+  /syncs/records:
+    get:
+      tags: [Syncs]
+      summary: Get records
+      operationId: getSyncRecords
+      parameters:
+        - in: query
+          name: model
+          schema:
+            type: string
+        - in: query
+          name: connection_id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Records.
+  /syncs/trigger:
+    post:
+      tags: [Syncs]
+      summary: Trigger sync(s)
+      operationId: triggerSync
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Sync triggered.
+  /syncs/status:
+    get:
+      tags: [Syncs]
+      summary: Get sync status
+      operationId: getSyncStatus
+      parameters:
+        - in: query
+          name: connection_id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Sync status.
+  /actions/trigger:
+    post:
+      tags: [Actions]
+      summary: Trigger an action
+      operationId: triggerAction
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Action result.
+  /proxy/{path}:
+    parameters:
+      - in: path
+        name: path
+        required: true
+        schema:
+          type: string
+        description: Upstream path appended to the configured integration base URL.
+    get:
+      tags: [Proxy]
+      summary: Proxy GET request
+      operationId: proxyGet
+      responses:
+        '200':
+          description: Upstream response.
+    post:
+      tags: [Proxy]
+      summary: Proxy POST request
+      operationId: proxyPost
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+      responses:
+        '200':
+          description: Upstream response.
+    put:
+      tags: [Proxy]
+      summary: Proxy PUT request
+      operationId: proxyPut
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+      responses:
+        '200':
+          description: Upstream response.
+    patch:
+      tags: [Proxy]
+      summary: Proxy PATCH request
+      operationId: proxyPatch
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+      responses:
+        '200':
+          description: Upstream response.
+    delete:
+      tags: [Proxy]
+      summary: Proxy DELETE request
+      operationId: proxyDelete
+      responses:
+        '200':
+          description: Upstream response.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Nango secret key supplied as a bearer token.
