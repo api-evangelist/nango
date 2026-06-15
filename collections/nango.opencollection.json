@@ -1,0 +1,446 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Nango API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Connections",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List connections",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nango.dev/connections"
+          },
+          "docs": "List connections"
+        },
+        {
+          "info": {
+            "name": "Import a connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.nango.dev/connections",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Import a connection"
+        },
+        {
+          "info": {
+            "name": "Get connection and credentials",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nango.dev/connections/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get connection and credentials"
+        },
+        {
+          "info": {
+            "name": "Patch a connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.nango.dev/connections/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Patch a connection"
+        },
+        {
+          "info": {
+            "name": "Delete a connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.nango.dev/connections/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a connection"
+        },
+        {
+          "info": {
+            "name": "Set connection metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.nango.dev/connections/:id/metadata",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Set connection metadata"
+        },
+        {
+          "info": {
+            "name": "Edit connection metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.nango.dev/connections/:id/metadata",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Edit connection metadata"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Integrations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List integrations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nango.dev/integrations"
+          },
+          "docs": "List integrations"
+        },
+        {
+          "info": {
+            "name": "Create an integration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.nango.dev/integrations",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an integration"
+        },
+        {
+          "info": {
+            "name": "Get an integration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nango.dev/integrations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an integration"
+        },
+        {
+          "info": {
+            "name": "Update an integration",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.nango.dev/integrations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update an integration"
+        },
+        {
+          "info": {
+            "name": "Delete an integration",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.nango.dev/integrations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an integration"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Syncs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nango.dev/syncs/records",
+            "params": [
+              {
+                "name": "model",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "connection_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get records"
+        },
+        {
+          "info": {
+            "name": "Trigger sync(s)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.nango.dev/syncs/trigger",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Trigger sync(s)"
+        },
+        {
+          "info": {
+            "name": "Get sync status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nango.dev/syncs/status",
+            "params": [
+              {
+                "name": "connection_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get sync status"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Actions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Trigger an action",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.nango.dev/actions/trigger",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Trigger an action"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Proxy",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Proxy GET request",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nango.dev/proxy/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Upstream path appended to the configured integration base URL."
+              }
+            ]
+          },
+          "docs": "Proxy GET request"
+        },
+        {
+          "info": {
+            "name": "Proxy POST request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.nango.dev/proxy/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Upstream path appended to the configured integration base URL."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Proxy POST request"
+        },
+        {
+          "info": {
+            "name": "Proxy PUT request",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.nango.dev/proxy/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Upstream path appended to the configured integration base URL."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Proxy PUT request"
+        },
+        {
+          "info": {
+            "name": "Proxy PATCH request",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.nango.dev/proxy/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Upstream path appended to the configured integration base URL."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Proxy PATCH request"
+        },
+        {
+          "info": {
+            "name": "Proxy DELETE request",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.nango.dev/proxy/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Upstream path appended to the configured integration base URL."
+              }
+            ]
+          },
+          "docs": "Proxy DELETE request"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
