@@ -35,7 +35,7 @@ apis:
       - url: https://nango.dev/docs/guides/primitives/auth
         type: Authentication
       - url: https://nango.dev/docs/llms.txt
-        type: LLMs.txt
+        type: LlmsText
     description: Nango provides a unified API platform for building product integrations with 600+ external
       APIs. It offers managed API authentication (OAuth and other auth methods), a syncing framework,
       proxy for API requests with automatic credential injection, webhook handling, and observability.
