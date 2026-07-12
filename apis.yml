@@ -40,6 +40,12 @@ apis:
       APIs. It offers managed API authentication (OAuth and other auth methods), a syncing framework,
       proxy for API requests with automatic credential injection, webhook handling, and observability.
 common:
+  - type: VulnerabilityDisclosure
+    url: security/nango-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/nango-domain-security.yml
+  - type: Authentication
+    url: authentication/nango-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/nangohq
   - url: https://nango.dev/docs
