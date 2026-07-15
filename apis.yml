@@ -40,6 +40,8 @@ apis:
       APIs. It offers managed API authentication (OAuth and other auth methods), a syncing framework,
       proxy for API requests with automatic credential injection, webhook handling, and observability.
 common:
+  - type: AgenticAccess
+    url: agentic-access/nango-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/nango-vulnerability-disclosure.yml
   - type: DomainSecurity
