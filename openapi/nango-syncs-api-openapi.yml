@@ -1,0 +1,75 @@
+openapi: 3.1.0
+info:
+  title: Nango Actions Syncs API
+  description: 'Nango is a developer infrastructure platform for building product
+
+    integrations with external APIs. The Nango API exposes endpoints
+
+    for managing integrations and connections, triggering syncs and
+
+    actions, and proxying authenticated requests to upstream APIs.
+
+    '
+  version: '1.0'
+servers:
+- url: https://api.nango.dev
+  description: Nango Cloud production API
+security:
+- bearerAuth: []
+tags:
+- name: Syncs
+  description: Manage and trigger data syncs.
+paths:
+  /syncs/records:
+    get:
+      tags:
+      - Syncs
+      summary: Get records
+      operationId: getSyncRecords
+      parameters:
+      - in: query
+        name: model
+        schema:
+          type: string
+      - in: query
+        name: connection_id
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Records.
+  /syncs/trigger:
+    post:
+      tags:
+      - Syncs
+      summary: Trigger sync(s)
+      operationId: triggerSync
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Sync triggered.
+  /syncs/status:
+    get:
+      tags:
+      - Syncs
+      summary: Get sync status
+      operationId: getSyncStatus
+      parameters:
+      - in: query
+        name: connection_id
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Sync status.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Nango secret key supplied as a bearer token.

@@ -1,0 +1,123 @@
+openapi: 3.1.0
+info:
+  title: Nango Actions Connections API
+  description: 'Nango is a developer infrastructure platform for building product
+
+    integrations with external APIs. The Nango API exposes endpoints
+
+    for managing integrations and connections, triggering syncs and
+
+    actions, and proxying authenticated requests to upstream APIs.
+
+    '
+  version: '1.0'
+servers:
+- url: https://api.nango.dev
+  description: Nango Cloud production API
+security:
+- bearerAuth: []
+tags:
+- name: Connections
+  description: Manage end-user connections and credentials.
+paths:
+  /connections:
+    get:
+      tags:
+      - Connections
+      summary: List connections
+      operationId: listConnections
+      responses:
+        '200':
+          description: List of connections.
+    post:
+      tags:
+      - Connections
+      summary: Import a connection
+      operationId: importConnection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Connection imported.
+  /connections/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Connections
+      summary: Get connection and credentials
+      operationId: getConnection
+      responses:
+        '200':
+          description: Connection details.
+    patch:
+      tags:
+      - Connections
+      summary: Patch a connection
+      operationId: patchConnection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Connection updated.
+    delete:
+      tags:
+      - Connections
+      summary: Delete a connection
+      operationId: deleteConnection
+      responses:
+        '204':
+          description: Connection deleted.
+  /connections/{id}/metadata:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - Connections
+      summary: Set connection metadata
+      operationId: setConnectionMetadata
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Metadata set.
+    patch:
+      tags:
+      - Connections
+      summary: Edit connection metadata
+      operationId: editConnectionMetadata
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Metadata updated.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Nango secret key supplied as a bearer token.

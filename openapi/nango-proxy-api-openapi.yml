@@ -1,0 +1,88 @@
+openapi: 3.1.0
+info:
+  title: Nango Actions Proxy API
+  description: 'Nango is a developer infrastructure platform for building product
+
+    integrations with external APIs. The Nango API exposes endpoints
+
+    for managing integrations and connections, triggering syncs and
+
+    actions, and proxying authenticated requests to upstream APIs.
+
+    '
+  version: '1.0'
+servers:
+- url: https://api.nango.dev
+  description: Nango Cloud production API
+security:
+- bearerAuth: []
+tags:
+- name: Proxy
+  description: Proxy requests to upstream APIs with credential injection.
+paths:
+  /proxy/{path}:
+    parameters:
+    - in: path
+      name: path
+      required: true
+      schema:
+        type: string
+      description: Upstream path appended to the configured integration base URL.
+    get:
+      tags:
+      - Proxy
+      summary: Proxy GET request
+      operationId: proxyGet
+      responses:
+        '200':
+          description: Upstream response.
+    post:
+      tags:
+      - Proxy
+      summary: Proxy POST request
+      operationId: proxyPost
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+      responses:
+        '200':
+          description: Upstream response.
+    put:
+      tags:
+      - Proxy
+      summary: Proxy PUT request
+      operationId: proxyPut
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+      responses:
+        '200':
+          description: Upstream response.
+    patch:
+      tags:
+      - Proxy
+      summary: Proxy PATCH request
+      operationId: proxyPatch
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+      responses:
+        '200':
+          description: Upstream response.
+    delete:
+      tags:
+      - Proxy
+      summary: Proxy DELETE request
+      operationId: proxyDelete
+      responses:
+        '200':
+          description: Upstream response.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Nango secret key supplied as a bearer token.

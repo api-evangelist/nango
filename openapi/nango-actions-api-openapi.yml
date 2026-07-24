@@ -1,0 +1,43 @@
+openapi: 3.1.0
+info:
+  title: Nango Actions API
+  description: 'Nango is a developer infrastructure platform for building product
+
+    integrations with external APIs. The Nango API exposes endpoints
+
+    for managing integrations and connections, triggering syncs and
+
+    actions, and proxying authenticated requests to upstream APIs.
+
+    '
+  version: '1.0'
+servers:
+- url: https://api.nango.dev
+  description: Nango Cloud production API
+security:
+- bearerAuth: []
+tags:
+- name: Actions
+  description: Trigger one-shot actions.
+paths:
+  /actions/trigger:
+    post:
+      tags:
+      - Actions
+      summary: Trigger an action
+      operationId: triggerAction
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Action result.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Nango secret key supplied as a bearer token.
