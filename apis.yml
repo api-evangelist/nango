@@ -5,7 +5,20 @@ description: Nango.dev is a developer infrastructure platform that simplifies bu
   API authentication, a syncing framework, webhook handling, and observability, supporting over 400 APIs
   with 600+ pre-built integrations.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nango.png
 url: https://raw.githubusercontent.com/api-evangelist/nango/refs/heads/main/apis.yml
 created: '2026-01-02'
 modified: '2026-05-04'
@@ -18,27 +31,73 @@ tags:
   - Unified API
   - Webhooks
 apis:
-  - aid: nango:nango
-    name: Nango
-    tags:
-      - Integrations
-      - OAuth
-      - Unified API
-    humanURL: https://www.nango.dev/
-    properties:
-      - url: https://www.nango.dev/
-        type: Documentation
-      - url: https://nango.dev/docs/reference/api
-        type: Reference
-      - url: https://nango.dev/docs/getting-started/quickstart
-        type: GettingStarted
-      - url: https://nango.dev/docs/guides/primitives/auth
-        type: Authentication
-      - url: https://nango.dev/docs/llms.txt
-        type: LlmsText
-    description: Nango provides a unified API platform for building product integrations with 600+ external
-      APIs. It offers managed API authentication (OAuth and other auth methods), a syncing framework,
-      proxy for API requests with automatic credential injection, webhook handling, and observability.
+- aid: nango:nango
+  name: Nango
+  tags:
+  - Integrations
+  - OAuth
+  - Unified API
+  humanURL: https://www.nango.dev/
+  properties:
+  - url: https://www.nango.dev/
+    type: Documentation
+  - url: https://nango.dev/docs/reference/api
+    type: Reference
+  - url: https://nango.dev/docs/getting-started/quickstart
+    type: GettingStarted
+  - url: https://nango.dev/docs/guides/primitives/auth
+    type: Authentication
+  - url: https://nango.dev/docs/llms.txt
+    type: LlmsText
+  description: >-
+    Nango provides a unified API platform for building product integrations with 600+ external APIs. It
+    offers managed API authentication (OAuth and other auth methods), a syncing framework, proxy for API
+    requests with automatic credential injection, webhook handling, and observability.
+- aid: nango:nango-actions-api
+  name: Nango Actions API
+  description: Trigger one-shot actions.
+  humanURL: https://www.nango.dev/
+  tags:
+  - Actions
+  properties:
+  - type: OpenAPI
+    url: openapi/nango-actions-api-openapi.yml
+- aid: nango:nango-connections-api
+  name: Nango Connections API
+  description: Manage end-user connections and credentials.
+  humanURL: https://www.nango.dev/
+  tags:
+  - Connections
+  properties:
+  - type: OpenAPI
+    url: openapi/nango-connections-api-openapi.yml
+- aid: nango:nango-integrations-api
+  name: Nango Integrations API
+  description: Manage integration definitions.
+  humanURL: https://www.nango.dev/
+  tags:
+  - Integrations
+  properties:
+  - type: OpenAPI
+    url: openapi/nango-integrations-api-openapi.yml
+- aid: nango:nango-proxy-api
+  name: Nango Proxy API
+  description: Proxy requests to upstream APIs with credential injection.
+  humanURL: https://www.nango.dev/
+  tags:
+  - Proxy
+  properties:
+  - type: OpenAPI
+    url: openapi/nango-proxy-api-openapi.yml
+- aid: nango:nango-syncs-api
+  name: Nango Syncs API
+  description: Manage and trigger data syncs.
+  humanURL: https://www.nango.dev/
+  tags:
+  - Syncs
+  properties:
+  - type: OpenAPI
+    url: openapi/nango-syncs-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/nango-agentic-access.yml
