@@ -1,0 +1,22 @@
+{
+  "provider": "nango",
+  "sources": [
+    "nango-actions-api-openapi.yml",
+    "nango-connections-api-openapi.yml",
+    "nango-integrations-api-openapi.yml",
+    "nango-proxy-api-openapi.yml",
+    "nango-syncs-api-openapi.yml"
+  ],
+  "outputs": [
+    "nango-actions-api-openapi.yml",
+    "nango-connections-api-openapi.yml",
+    "nango-integrations-api-openapi.yml",
+    "nango-proxy-api-openapi.yml",
+    "nango-syncs-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
