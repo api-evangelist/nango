@@ -1,0 +1,80 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Nango Actions Syncs API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Syncs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nango.dev/syncs/records",
+            "params": [
+              {
+                "name": "model",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "connection_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get records"
+        },
+        {
+          "info": {
+            "name": "Trigger sync(s)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.nango.dev/syncs/trigger",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Trigger sync(s)"
+        },
+        {
+          "info": {
+            "name": "Get sync status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nango.dev/syncs/status",
+            "params": [
+              {
+                "name": "connection_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get sync status"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

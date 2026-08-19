@@ -1,0 +1,131 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Nango Actions Proxy API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Proxy",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Proxy GET request",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nango.dev/proxy/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Upstream path appended to the configured integration base URL."
+              }
+            ]
+          },
+          "docs": "Proxy GET request"
+        },
+        {
+          "info": {
+            "name": "Proxy POST request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.nango.dev/proxy/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Upstream path appended to the configured integration base URL."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Proxy POST request"
+        },
+        {
+          "info": {
+            "name": "Proxy PUT request",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.nango.dev/proxy/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Upstream path appended to the configured integration base URL."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Proxy PUT request"
+        },
+        {
+          "info": {
+            "name": "Proxy PATCH request",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.nango.dev/proxy/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Upstream path appended to the configured integration base URL."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Proxy PATCH request"
+        },
+        {
+          "info": {
+            "name": "Proxy DELETE request",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.nango.dev/proxy/:path",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "path",
+                "description": "Upstream path appended to the configured integration base URL."
+              }
+            ]
+          },
+          "docs": "Proxy DELETE request"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
