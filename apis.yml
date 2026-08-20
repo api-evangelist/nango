@@ -25,6 +25,13 @@ modified: '2026-05-04'
 specificationVersion: '0.23'
 tags:
   - AI Agents
+  - Integration
+  - Authentication
+  - Syncing
+  - Unified-API
+  - Webhook
+tags_raw:
+  - AI Agents
   - Integrations
   - OAuth
   - Syncing
@@ -34,6 +41,10 @@ apis:
 - aid: nango:nango
   name: Nango
   tags:
+  - Integration
+  - Authentication
+  - Unified-API
+  tags_raw:
   - Integrations
   - OAuth
   - Unified API
@@ -76,6 +87,8 @@ apis:
   description: Manage integration definitions.
   humanURL: https://www.nango.dev/
   tags:
+  - Integration
+  tags_raw:
   - Integrations
   properties:
   - type: OpenAPI
