@@ -5,6 +5,19 @@ description: Nango.dev is a developer infrastructure platform that simplifies bu
   API authentication, a syncing framework, webhook handling, and observability, supporting over 400 APIs
   with 600+ pre-built integrations.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
