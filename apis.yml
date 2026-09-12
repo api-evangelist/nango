@@ -35,7 +35,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nango.png
 url: https://raw.githubusercontent.com/api-evangelist/nango/refs/heads/main/apis.yml
 created: '2026-01-02'
-modified: '2026-05-04'
+modified: '2026-09-06'
 specificationVersion: '0.23'
 tags:
   - AI Agents
@@ -126,6 +126,8 @@ apis:
   - type: OpenAPI
     url: openapi/nango-syncs-api-openapi.yml
 common:
+  - type: Website
+    url: https://www.nango.dev/
   - type: AgenticAccess
     url: agentic-access/nango-agentic-access.yml
   - type: VulnerabilityDisclosure
@@ -177,6 +179,12 @@ common:
     sources:
       - https://www.nango.dev/pricing
     updated: '2026-05-04'
+  - name: MCP Server
+    url: https://mcp.nango.dev/mcp
+    type: MCPServer
+  - name: MCP Documentation
+    url: https://nango.dev/docs/reference/backend/management-mcp
+    type: MCPDocumentation
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
