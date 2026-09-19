@@ -121,6 +121,8 @@ apis:
   description: Manage and trigger data syncs.
   humanURL: https://www.nango.dev/
   tags:
+  - Sync
+  tags_raw:
   - Syncs
   properties:
   - type: OpenAPI
