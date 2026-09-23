@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Nango Actions API
   description: 'Nango is a developer infrastructure platform for building product
@@ -7,9 +7,7 @@ info:
 
     for managing integrations and connections, triggering syncs and
 
-    actions, and proxying authenticated requests to upstream APIs.
-
-    '
+    actions, and proxying authenticated requests to upstream APIs.'
   version: '1.0'
 servers:
 - url: https://api.nango.dev

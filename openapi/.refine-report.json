@@ -1,11 +1,7 @@
 {
   "provider": "nango",
   "sources": [
-    "nango-actions-api-openapi.yml",
-    "nango-connections-api-openapi.yml",
-    "nango-integrations-api-openapi.yml",
-    "nango-proxy-api-openapi.yml",
-    "nango-syncs-api-openapi.yml"
+    "_original/nango-openapi.yml"
   ],
   "outputs": [
     "nango-actions-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "nango-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "nango-actions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nango-connections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nango-integrations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nango-proxy-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nango-syncs-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
