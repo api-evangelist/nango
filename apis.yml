@@ -7,6 +7,10 @@ description: Nango.dev is a developer infrastructure platform that simplifies bu
 type: Index
 deliveryModel:
   model: unknown
+  license_evidence:
+    repo: nangohq/nango
+    spdx: NOASSERTION
+    stars: 12332
   open_source: unknown
   commercial: true
   callable_host: true
@@ -16,7 +20,7 @@ deliveryModel:
   - openapi
   - pricing
   - repository-unlicensed
-  generated: '2026-08-28'
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -42,7 +46,7 @@ tags:
   - Integration
   - Authentication
   - Syncing
-  - Unified-API
+  - Unified API
   - Webhook
 tags_raw:
   - AI Agents
@@ -51,17 +55,19 @@ tags_raw:
   - Syncing
   - Unified API
   - Webhooks
+  - Unified-API
 apis:
 - aid: nango:nango
   name: Nango
   tags:
   - Integration
   - Authentication
-  - Unified-API
+  - Unified API
   tags_raw:
   - Integrations
   - OAuth
   - Unified API
+  - Unified-API
   humanURL: https://www.nango.dev/
   properties:
   - url: https://www.nango.dev/
