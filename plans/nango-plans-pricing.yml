@@ -166,3 +166,53 @@ plans:
       - name: Logs export
       - name: RBAC + SAML SSO
       - name: Optional HIPAA + self-hosting
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - subscription
+  units:
+  - compute
+  - object
+  - period
+  - request
+  plans:
+  - name: Free
+    access: freemium
+    model: free
+    model_how: derived
+    units:
+    - compute
+    - object
+    - request
+    periods:
+    - month
+  - name: Starter
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
+  - name: Growth
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
+  - name: Enterprise
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods:
+    - year
