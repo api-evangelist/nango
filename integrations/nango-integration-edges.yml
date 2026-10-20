@@ -1,4 +1,47 @@
-generated: '2026-10-15'
+generated: '2026-10-20'
+method: searched
+source:
+- https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
+- https://composio.dev/toolkits/nango
+checked:
+- https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
+- https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/
+- https://composio.dev/toolkits/nango
+- https://monid.ai/tools/nango
+- https://n8n.io/integrations/nango/
+- https://zapier.com/apps/nango/integrations
+summary: null
+marketplace_apps:
+- marketplace: composio
+  channel: agent-gateway
+  app: nango
+  url: https://composio.dev/toolkits/nango
+  identity: action-prefix
+  actions:
+  - key: NANGO_ACTION_TRIGGER_POST
+  - key: NANGO_ADD_CONNECTION
+  - key: NANGO_CONNECTION_GET
+  - key: NANGO_CREATE_CONNECT_SESSION
+  - key: NANGO_CREATE_INTEGRATION
+  - key: NANGO_DELETE_CONNECTION
+  - key: NANGO_DELETE_INTEGRATION
+  - key: NANGO_EDIT_CONNECTION
+  - key: NANGO_GET_CONNECTION
+  - key: NANGO_GET_ENVIRONMENT_VARIABLES
+  - key: NANGO_GET_INTEGRATION
+  - key: NANGO_GET_PROXY
+  - key: NANGO_GET_SYNC_STATUS
+  - key: NANGO_LIST_CONNECTIONS
+  - key: NANGO_LIST_INTEGRATIONS
+  - key: NANGO_PROVIDERS_GET_GET
+  - key: NANGO_PROVIDERS_LIST_GET
+  - key: NANGO_PUT_PROXY
+  - key: NANGO_RECONNECT_SESSION_POST
+  - key: NANGO_SCRIPTS_CONFIG_GET
+  - key: NANGO_SET_CONNECTION_METADATA
+  - key: NANGO_SYNC_TRIGGER_POST
+  - key: NANGO_UPDATE_CONNECTION_METADATA
+  - key: NANGO_UPDATE_INTEGRATION
 edges:
 - partner_name: Pipedream
   partner: pipedream
@@ -26,9 +69,4 @@ edges:
     builder: Pipedream repo (component)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
-method: searched
-checked:
-- https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
-- https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/
-source:
-- https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
+templates: []
