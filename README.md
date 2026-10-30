@@ -1,4 +1,4 @@
-# Nango (nango)
+# Nango
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,66 +66,139 @@
 
 Nango.dev is a developer infrastructure platform that simplifies building product integrations with external APIs. It provides the infrastructure to build reliable, scalable integrations fast, including API authentication, a syncing framework, webhook handling, and observability, supporting over 400 APIs with 600+ pre-built integrations.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/nango/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/nango/refs/heads/main/apis.yml)
+**Areas:** AI Agents · Integration · Authentication · Syncing · Unified API · Webhook
 
-## Scope
+## Nango on APIs.io
 
-- **Type:** Index
+Everything profiled for Nango is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/nango/](https://apis.io/providers/nango/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (6)
 
-- AI Agents
-- Integrations
-- OAuth
-- Syncing
-- Unified API
-- Webhooks
+- [Nango](https://apis.io/apis/nango/nango/) — Nango provides a unified API platform for building product integrations with 600+ external APIs. It offers managed API authentication (OAuth and other auth…
+- [Nango Actions API](https://apis.io/apis/nango/nango-actions-api/) — Trigger one-shot actions.
+- [Nango Connections API](https://apis.io/apis/nango/nango-connections-api/) — Manage end-user connections and credentials.
+- [Nango Integrations API](https://apis.io/apis/nango/nango-integrations-api/) — Manage integration definitions.
+- [Nango Proxy API](https://apis.io/apis/nango/nango-proxy-api/) — Proxy requests to upstream APIs with credential injection.
+- [Nango Syncs API](https://apis.io/apis/nango/nango-syncs-api/) — Manage and trigger data syncs.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-01-02
-- **Modified:** 2026-05-04
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Nango
+Model Context Protocol servers that expose the API to agents.
 
-Nango provides a unified API platform for building product integrations with 600+ external APIs. It offers managed API authentication (OAuth and other auth methods), a syncing framework, proxy for API requests with automatic credential injection, webhook handling, and observability.
+- [MCP Server](https://apis.io/servers/nango/mcp-server/)
 
-- **Human URL:** [https://www.nango.dev/](https://www.nango.dev/)
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Integrations
-- OAuth
-- Unified API
+- [Nango Agentic Access](https://apis.io/agentic-access/nango/nango-agentic-access/)
 
-#### Properties
+#### Collections (6)
 
-- [Documentation](https://www.nango.dev/)
-- [Reference](https://nango.dev/docs/reference/api)
-- [Getting Started](https://nango.dev/docs/getting-started/quickstart)
-- [Authentication](https://nango.dev/docs/guides/primitives/auth)
-- [L L Ms.txt](https://nango.dev/docs/llms.txt)
-- [Postman Collection](collections/nango.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/nango.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-## Common Properties
+- [Nango API](https://apis.io/collections/nango/open-nango/)
+- [Nango Actions API](https://apis.io/collections/nango/open-nango-actions-api/)
+- [Nango Actions Connections API](https://apis.io/collections/nango/open-nango-connections-api/)
+- [Nango Actions Integrations API](https://apis.io/collections/nango/open-nango-integrations-api/)
+- [Nango Actions Proxy API](https://apis.io/collections/nango/open-nango-proxy-api/)
+- [Nango Actions Syncs API](https://apis.io/collections/nango/open-nango-syncs-api/)
 
-- [LinkedIn](https://www.linkedin.com/company/nangohq)
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Nango Authentication](https://apis.io/security/nango/nango-authentication/)
+- [Nango Domain Security](https://apis.io/security/nango/nango-domain-security/)
+- [Nango Vulnerability Disclosure](https://apis.io/security/nango/nango-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Nango Plans Pricing](https://apis.io/plans/nango/nango-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Nango Rate Limits](https://apis.io/rate-limits/nango/nango-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Nango Finops](https://apis.io/finops/nango/nango-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.nango.dev/)
 - [Documentation](https://nango.dev/docs)
-- [Getting Started](https://nango.dev/docs/getting-started/quickstart)
+- [Getting started](https://nango.dev/docs/getting-started/quickstart)
 - [Pricing](https://nango.dev/pricing)
-- [Blog](https://nango.dev/blog)
 - [Changelog](https://nango.dev/docs/updates)
-- [Status Page](https://status.nango.dev/)
-- [Portal](https://app.nango.dev)
-- [Terms of Service](https://nango.dev/terms)
-- [Privacy Policy](https://nango.dev/privacy-policy)
-- [GitHub Repository](https://github.com/NangoHQ/nango)
-- [Features](undefined)
+- [Blog](https://nango.dev/blog)
+- [Terms of service](https://nango.dev/terms)
+- [Privacy policy](https://nango.dev/privacy-policy)
+- [Status](https://status.nango.dev/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 44.7** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.7 |
+| Contract quality | 46.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 55.3 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 39.5 |
+
+**Agent readiness 31.6** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 25.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/nango/](https://apis.io/providers/nango/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Nango: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/nango/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
